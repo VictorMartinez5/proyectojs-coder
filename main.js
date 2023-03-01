@@ -126,22 +126,28 @@ function calcularCuotas(precioTotal, cantCuotas, intereses){
 
 let elegirCuotas = parseInt(prompt("Escoja su metodo de compra: (1) Al contado " +alContado +" (2) 3 Cuotas  de " +cuotas3 +" (3) 6 Cutoas de " +cuotas6))
 
+let infoCuotas
 
 let cuotaElegida= false
 
 while(cuotaElegida === false){
     if(elegirCuotas === 1){
         cuotaElegida = true
+        infoCuotas = alContado
     }
     else if (elegirCuotas === 2){
         cutotaElegida = true
+        infoCuotas = cuotas3
     }
     else if (elegirCuotas === 3){
         cuotaElegida = true
+        infoCuotas = cuotas6
     }
     else {
         elegirCuotas = parseInt(prompt("Escoja su metodo de compra CORRECTO: (1) Al contado " +alContado +" (2) 3 Cuotas  de " +cuotas3 +" (3) 6 Cutoas de " +cuotas6))
     }
 }
+
+alert("Su compra fue confirmada: " +infoRemera.nombre +" Lugar de Entrega: " +infoEnvio.provincia +" A $" +infoCuotas)
 
 
